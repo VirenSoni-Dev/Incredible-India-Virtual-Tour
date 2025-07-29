@@ -90,3 +90,11 @@
    align-items: center;
    gap: 2.5em 1em;
 }
+
+@media screen and (max-width: 1012px) {
+   .main #headingAndSearch .search-and-filters {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+   }
+}
