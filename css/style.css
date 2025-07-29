@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abril+Fatface&family=Cookie&family=Fredoka:wght@300..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brand-color: #090A78;
+    --primary-color: #2223CE;
+    --secondary-color: #6E6FDF;
+    --brand-text-color: #3D3A74;
+    --brand-text-color-light: #E7E7E7;
+    --text-col: #000;
+    --text-col-light: #FFF;
+    --bg-tint: #9AE4FF1D;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+body {
+    background-color: var(--bg-tint);
+}
+
+/* HEADER - NAVBAR */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header #navbar {
+    background-color: var(--brand-color);
+    color: var(--text-col-light);
+    height: 9.7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+header #navbar .logo {
+    padding: 0 1.7em;
+}
+
+header #navbar .logo .logo-text {
+    font-family: 'Lemon Tuesday', sans-serif;
+    font-size: 2.4em;
+    background-image: linear-gradient(to bottom, #FF9933, #FFFFFF, #138808);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header #navbar .nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2em;
+}
+
+header #navbar .nav-links ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-col-light);
+    font-family: 'Spoof Trial', sans-serif;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+header #navbar .nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    border-radius: 100px;
+    bottom: -5px;
+    /* Adjust this value for the desired offset */
+    left: 0;
+    background-color: var(--text-col-light);
+    transition: all 0.4s ease-in-out;
+}
+
+header #navbar .nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: white;
+    min-width: 150px;
+    border: 1px solid #ddd;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+    text-align: center;
+}
+
+header #navbar .nav-links ul .dropdown-menu li a {
+    padding: 10px;
+    display: block;
+    color: black;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f2f2f2;
+}
+
+/* HOVER EFFECT */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+header #navbar .login {
+    padding-right: 1.7em;
+}
+
+header #navbar .login-btn {
+    padding: 0.3em 0.9em;
+    background: transparent;
+    color: var(--secondary-color);
+    border: 4px solid var(--secondary-color);
+    border-radius: 100px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+header #navbar .login-btn:hover {
+    transform: scale(1.05);
+    font-size: 1.4;
+    color: var(--brand-color);
+    background-color: var(--secondary-color);
+}
+
+/* HERO SECTION */
+.main #hero {
+    height: calc(100vh - 9.7vh);
+    position: relative;
+    /* background: url('../images/bg-image-flag.jpg') center/cover no-repeat; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+/* .main #hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: brightness(75%);
+    z-index: -1;
+} */
+
+.main #hero .hero-content {
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main #hero .hero-content .hero-text {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 5em;
+    text-align: center;
+}
+
+.main #hero .hero-content .hero-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.main #hero .hero-content .hero-search input {
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    width: 330px;
+    padding: 0.5em 1.2em;
+    background-color: #FFF;
+    border: 1px solid var(--brand-text-color-light);
+    border-radius: 100px;
+    outline: none;
+    transition: all 0.1s linear;
+}
+
+.main #hero .hero-content .hero-search input:hover {
+    border-color: var(--secondary-color);
+    border-width: 2px;
+}
+
+.main #hero .hero-content .hero-search input:focus {
+    border-color: var(--primary-color);
+    border-width: 2px;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.main #hero .hero-content .hero-search svg {
+    fill: var(--primary-color);
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* HEADING OF EACH SECTION */
+.main .heading {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+.main .heading u em {
+    font-style: normal;
+}
+
+/* CARDS IN EACH SECTION */
+.main .cards {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+
+.main .home-card {
+    background-color: #FFF;
+    width: 300px;
+    min-height: 450px;
+    border-radius: 1em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.main .home-card:hover {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-8px) scale(1.05);
+}
+
+.main .home-card .card-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 1em 1em 0 0;
+    overflow: hidden;
+}
+
+.main .home-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .home-card .card-content {
+    margin: 1em;
+    padding: 1em;
+}
+
+.main .home-card .card-content h4 {
+    color: var(--brand-text-color);
+    font-family: 'Playwrite GB S';
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
+.main .home-card .card-content p {
+    margin-top: 1em;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+}
+
+/* REGIONS */
+.main #regions {
+    min-height: 100vh;
+    padding: 2em 3em;
+}
+
+/* FESETIVALS */
+.main #festivals {
+    min-height: 100vh;
+    padding: 2em 3em;
+}
+
+/* CUISINES */
+.main #cuisines {
+    min-height: 100vh;
+    padding: 2em 3em;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    background-color: var(--brand-color);
+    color: var(--text-col-light);
+    border-radius: 0.5em 0.5em 0 0;
+    padding: 2em 2em 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 35vh;
+    height: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-content .footer-logo {
+    margin-left: 2.3em;
+}
+
+footer .footer-content .footer-logo .logo-text {
+    font-family: 'Lemon Tuesday', sans-serif;
+    font-size: 2.5em;
+    background-image: linear-gradient(to bottom, #FF9933, #FFFFFF, #138808);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.4em;
+}
+
+footer .footer-content .footer-logo p {
+    font-family: 'Cookie', sans-serif;
+    font-size: 1.7em;
+}
+
+footer .footer-section {
+    margin-right: 3em;
+}
+
+footer .footer-section h4 {
+    font-family: 'Spoof Trial', sans-serif;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+footer .footer-section ul {
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .footer-section ul li {
+    padding: 3px;
+}
+
+footer .follow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .follow h4 {
+    margin-bottom: 0;
+}
+
+footer .follow ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+footer .follow ul li {
+    font-size: 2em;
+}
+
+footer .follow>a {
+    margin-top: 1.6em;
+    border: 2px solid var(--text-col-light);
+    font-weight: bold;
+    padding: 0.5em 0.7em;
+    border-radius: 100px;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+
+footer .follow>a:hover {
+    background-color: var(--text-col-light);
+    color: var(--brand-color);
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: auto;
+}
+
+footer .copyright p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    margin: 1em 0;
+}
+
+
+@media screen and (min-width: 992px) {
+    .main #hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url("../images/bg-image-flag.jpg") center/cover no-repeat;
+    }
+
+    .main #hero .hero-content .hero-text {
+        color: var(--brand-text-color-light);
+    }
+
+    .main #hero .hero-content .hero-search svg {
+        fill: var(--brand-text-color-light);
+    }
+}

@@ -1,0 +1,86 @@
+[
+   {
+      "title": "Diwali",
+      "region": "North",
+      "state": "All India",
+      "image": "images/festival/diwali.webp",
+      "description": "Festival of lights symbolizing victory of good over evil, celebrated with fireworks and decorations."
+   },
+   {
+      "title": "Holi",
+      "region": "North",
+      "state": "Uttar Pradesh",
+      "image": "images/festival/holi.webp",
+      "description": "Colorful spring festival where people throw powders and water, celebrating love and new beginnings."
+   },
+   {
+      "title": "Durga Puja",
+      "region": "East",
+      "state": "West Bengal",
+      "image": "images/festival/durga_puja.webp",
+      "description": "Ten-day festival honoring Goddess Durga, featuring grand processions, music, dance, and cultural events."
+   },
+   {
+      "title": "Pongal",
+      "region": "South",
+      "state": "Tamil Nadu",
+      "image": "images/festival/pongal.webp",
+      "description": "Traditional harvest festival expressing gratitude for good crops, celebrated with feasts and bonfires."
+   },
+   {
+      "title": "Onam",
+      "region": "South",
+      "state": "Kerala",
+      "image": "images/festival/onam.webp",
+      "description": "Cultural festival featuring floral decorations, boat races, traditional feasts, and folk performances throughout Kerala."
+   },
+   {
+      "title": "Ganesh Chaturthi",
+      "region": "West",
+      "state": "Maharashtra",
+      "image": "images/festival/ganesh_chaturthi.webp",
+      "description": "Festival celebrating Lord Ganesha's birth with elaborate idols, prayers, processions, and community gatherings."
+   },
+   {
+      "title": "Baisakhi",
+      "region": "North",
+      "state": "Punjab",
+      "image": "images/festival/baisakhi.webp",
+      "description": "Harvest festival marking the Punjabi New Year, featuring music, folk dances, fairs, and joyous celebrations."
+   },
+   {
+      "title": "Navratri",
+      "region": "West",
+      "state": "Gujarat",
+      "image": "images/festival/navratri.webp",
+      "description": "Nine-night festival dedicated to Goddess Durga with devotional dances, prayers, music, and vibrant costumes."
+   },
+   {
+      "title": "Makar Sankranti",
+      "region": "West",
+      "state": "Rajasthan",
+      "image": "images/festival/makar_sankranti.webp",
+      "description": "Kite-flying festival celebrating the sun's transition, marked by fairs, sweets, and colorful cultural events."
+   },
+   {
+      "title": "Rath Yatra",
+      "region": "East",
+      "state": "Odisha",
+      "image": "images/festival/rath_yatra.webp",
+      "description": "Annual chariot procession of Lord Jagannath, attracting millions of devotees and visitors to Puri city."
+   },
+   {
+      "title": "Lohri",
+      "region": "North",
+      "state": "Punjab",
+      "image": "images/festival/lohri.webp",
+      "description": "Bonfire festival celebrating winter's end, with traditional dances, folk songs, sweets, and family gatherings."
+   },
+   {
+      "title": "Mahashivratri",
+      "region": "All",
+      "state": "All India",
+      "image": "images/festival/mahashivratri.webp",
+      "description": "Night of Lord Shiva worship observed across India with prayers, fasting, chanting, and temple celebrations."
+   }
+]

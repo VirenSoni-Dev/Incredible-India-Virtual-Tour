@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festivals - Incredible India Portal</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header, footer {
+      background-color: #fff;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav span {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    main {
+      flex: 1;
+      min-height: calc(100vh - 140px);
+      padding: 20px;
+    }
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .filters input[type="text"], .filters select {
+      padding: 8px;
+      font-size: 14px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 15px;
+    }
+    @media(min-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .card .title {
+      padding: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+    }
+    .card .description {
+      padding: 0 10px 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    footer {
+      border-top: 1px solid #ccc;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>LOGO</strong></div>
+    <nav>
+      <span onclick="location.href='index.html'">Home</span>
+      <span onclick="location.href='festivals.html'">Festivals</span>
+      <span>Contact</span>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Explore Festivals of Incredible India</h1>
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search festivals..." oninput="applyFilters()">
+      <select id="regionSelect" onchange="regionChanged()">
+        <option value="all">All Regions</option>
+        <option value="north">North</option>
+        <option value="south">South</option>
+        <option value="east">East</option>
+        <option value="west">West</option>
+      </select>
+      <select id="stateSelect" disabled onchange="applyFilters()">
+        <option value="all">All States</option>
+      </select>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </main>
+
+  <footer>
+    <div><strong>LOGO Area</strong></div>
+    <div>Need help? Contact us at: <br/>📞 123-456-7890 | ✉️ help@example.com</div>
+    <div>Feedback & Suggestions welcome!</div>
+    <div><a href="#top">Back to top</a></div>
+    <div>&copy; 2025 Incredible India Portal</div>
+  </footer>
+
+  <script>
+    const festivals = [
+      { title: 'Diwali', region: 'north', state: 'Delhi', image: 'https://via.placeholder.com/220x140', description: 'Festival of Lights celebrated all over India.' },
+      { title: 'Holi', region: 'north', state: 'Uttar Pradesh', image: 'https://via.placeholder.com/220x140', description: 'Festival of Colors marking the arrival of spring.' },
+      { title: 'Durga Puja', region: 'east', state: 'West Bengal', image: 'https://via.placeholder.com/220x140', description: 'Major festival celebrated mainly in West Bengal.' },
+      { title: 'Pongal', region: 'south', state: 'Tamil Nadu', image: 'https://via.placeholder.com/220x140', description: 'Harvest festival of Tamil Nadu.' },
+      { title: 'Onam', region: 'south', state: 'Kerala', image: 'https://via.placeholder.com/220x140', description: 'Traditional festival celebrated in Kerala.' },
+      { title: 'Ganesh Chaturthi', region: 'west', state: 'Maharashtra', image: 'https://via.placeholder.com/220x140', description: 'Celebration of Lord Ganesha’s birth, mainly in Maharashtra.' },
+      { title: 'Eid al-Fitr', region: 'all', state: 'All India', image: 'https://via.placeholder.com/220x140', description: 'Important religious holiday celebrated by Muslims across India.' },
+      { title: 'Christmas', region: 'all', state: 'All India', image: 'https://via.placeholder.com/220x140', description: 'Celebration of the birth of Jesus Christ celebrated across India.' }
+    ];
+
+    function populateStates(region) {
+      const stateSelect = document.getElementById('stateSelect');
+      stateSelect.innerHTML = '<option value="all">All States</option>';
+      const filteredStates = [...new Set(festivals.filter(f => region==='all' || f.region===region).map(f => f.state))];
+      filteredStates.forEach(state => {
+        const option = document.createElement('option');
+        option.value = state;
+        option.textContent = state;
+        stateSelect.appendChild(option);
+      });
+      stateSelect.disabled = filteredStates.length === 0;
+    }
+
+    function regionChanged(){
+      const region = document.getElementById('regionSelect').value;
+      populateStates(region);
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const region = document.getElementById('regionSelect').value;
+      const state = document.getElementById('stateSelect').value;
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = '';
+
+      festivals.filter(festival => {
+        return (
+          (search === '' || festival.title.toLowerCase().includes(search)) &&
+          (region === 'all' || festival.region === region) &&
+          (state === 'all' || festival.state === state)
+        );
+      }).forEach(festival => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${festival.image}" alt="${festival.title}">
+          <div class="title">${festival.title}</div>
+          <div class="description">${festival.description}</div>
+        `;
+        gallery.appendChild(card);
+      });
+    }
+
+    window.onload = () => {
+      populateStates('all');
+      applyFilters();
+    }
+  </script>
+</body>
+</html>

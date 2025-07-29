@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="fonts/stylesheet.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+   <link rel="stylesheet" href="css/color-palette.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/explore-style.css">
+   <title>Cuisines - Incredible India Virtual Tour</title>
+</head>
+
+<body>
+
+   <div id="top"></div>
+
+   <header>
+      <nav id="navbar">
+         <div class="logo">
+            <h1 class="logo-text">LOGO</h1>
+         </div>
+         <div class="nav-links">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="#">States</a> <i class="fa-solid fa-caret-down"></i></li>
+               <li class="dropdown">
+                  <a href="#">Explore</a> <i class="fa-solid fa-caret-down"></i>
+                  <ul class="dropdown-menu">
+                     <li><a href="festivals.html">Festivals</a></li>
+                     <li><a href="cuisines.html">Cuisines</a></li>
+                  </ul>
+               </li>
+               <li><a href="#">Contact</a></li>
+            </ul>
+         </div>
+         <div class="login">
+            <button class="login-btn">LogIn</button>
+         </div>
+      </nav>
+   </header>
+
+   <main class="main">
+      <section id="headingAndSearch">
+         <div class="head">
+            <h1 class="heading-text">Explore the Cuisines</h1>
+         </div>
+         <div class="search-and-filters">
+            <div class="search">
+               <input type="text" id="searchInput" placeholder="Search in Cuisine...." oninput="applyFilters()">
+            </div>
+            <div class="filters">
+               <select name="regions" id="regionSelect" onchange="applyFilters()">
+                  <option value="all" selected>All Regions</option>
+                  <option value="North">North</option>
+                  <option value="South">South</option>
+                  <option value="East">East</option>
+                  <option value="West">West</option>
+               </select>
+               <select name="states" id="stateSelect" disabled onchange="applyFilters()">
+                  <option value="all" selected>All States</option>
+               </select>
+            </div>
+         </div>
+      </section>
+
+      <section id="gallery"></section>
+   </main>
+
+   <footer>
+      <div class="footer-content">
+         <div class="footer-logo">
+            <h3 class="logo-text">Incredible India</h3>
+            <p>Bringing Indian Culture closer to You</p>
+         </div>
+         <div class="help footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+               <li><a href="#">Explore</a></li>
+               <li><a href="#">Contact</a></li>
+               <li><a href="#">Rajasthan</a></li>
+               <li><a href="#">Kerala</a></li>
+            </ul>
+         </div>
+         <div class="follow footer-section">
+            <h4>Follow Me</h4>
+            <ul>
+               <li><a href="https://github.com/VirenSoni-Dev"><i class="fa-brands fa-github"></i></a></li>
+               <li><a href="https://linkedin.com/viren-soni-1245rw007"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+            <a href="#top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
+         </div>
+      </div>
+      <div class="copyright">
+         <hr size="2" color="lightgray">
+         <p class="cr-text">&copy; Incredible India Portal. All rights reserved.</p>
+      </div>
+   </footer>
+
+   <!-- AOS Library - currently not there -->
+   <script src="cuisine-script.js" defer></script>
+</body>
+
+</html>

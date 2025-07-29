@@ -1,0 +1,92 @@
+:root {
+   --brand-color: #090A78;
+   --primary-color: #2223CE;
+   --secondary-color: #6E6FDF;
+   --brand-text-color: #3D3A74;
+   --brand-text-color-light: #E7E7E7;
+   --text-col: #000;
+   --text-col-light: #FFF;
+   --bg-tint: #9AE4FF1D;
+}
+
+.main {
+   min-height: calc(100vh - 9.7vh);
+}
+
+.main #headingAndSearch .head {
+   margin: 0.7em;
+   padding: 0.5em 0 0.5em 1em;
+}
+
+.main #headingAndSearch .head .heading-text {
+   font-family: 'Abril Fatface', sans-serif;
+   font-size: 2.5em;
+}
+
+.main #headingAndSearch .search-and-filters {
+   margin: 0 0 0.7em 1em;
+   padding-left: 1em;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 0.5em;
+}
+
+.main #headingAndSearch .search-and-filters .search input {
+   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+   font-size: 1.1em;
+   color: var(--primary-color);
+   width: max(330px, 550px);
+   padding: 0.5em 1.2em;
+   background-color: #FFF;
+   border: 1px solid var(--brand-text-color-light);
+   border-radius: 10px;
+   outline: none;
+   transition: all 0.1s linear;
+}
+
+.main #headingAndSearch .search-and-filters .search input:hover {
+   border-color: var(--secondary-color);
+   border-width: 2px;
+}
+
+.main #headingAndSearch .search-and-filters .search input:focus {
+   border-color: var(--primary-color);
+   border-width: 2px;
+   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.main #headingAndSearch .search-and-filters .filters select {
+   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+   font-size: 1.1em;
+   color: var(--primary-color);
+   width: 200px;
+   padding: 0.5em 1.2em;
+   background-color: #FFF;
+   border: 1px solid var(--brand-text-color-light);
+   border-radius: 10px;
+   outline: none;
+   transition: all 0.1s linear;
+}
+
+.main #headingAndSearch .search-and-filters .filters select:hover {
+   border-color: var(--secondary-color);
+   border-width: 2px;
+}
+
+.main #headingAndSearch .search-and-filters .filters select:focus {
+   border-color: var(--primary-color);
+   border-width: 2px;
+   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.main #gallery {
+   margin: 1.6em auto;
+   padding: 1.5em 2em;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+   max-width: 1455px;
+   justify-items: center;
+   align-items: center;
+   gap: 2.5em 1em;
+}

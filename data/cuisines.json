@@ -1,0 +1,86 @@
+[
+   {
+      "title": "Vada Pav",
+      "region": "West",
+      "state": "Maharashtra",
+      "image": "images/cuisine/vada_pav.webp",
+      "description": "Spicy potato fritter placed inside a bun, served with chutneys and fried green chili, popular street food of Mumbai."
+   },
+   {
+      "title": "Khichdi",
+      "region": "All",
+      "state": "All India",
+      "image": "images/cuisine/khichdi.webp",
+      "description": "Comforting dish made of rice and lentils cooked with mild spices, served with ghee and pickle."
+   },
+   {
+      "title": "Masala Dosa",
+      "region": "South",
+      "state": "Karnataka",
+      "image": "images/cuisine/dosa.webp",
+      "description": "Crispy fermented rice crepe filled with spicy mashed potatoes, served with coconut chutney and hot sambar."
+   },
+   {
+      "title": "Aloo Paratha",
+      "region": "North",
+      "state": "Punjab",
+      "image": "images/cuisine/aloo_paratha.webp",
+      "description": "Stuffed flatbread made with spiced mashed potatoes, cooked on a griddle and served with butter or curd."
+   },
+   {
+      "title": "Pakhala Bhata",
+      "region": "East",
+      "state": "Odisha",
+      "image": "images/cuisine/pakhala_bhata.webp",
+      "description": "Fermented rice soaked in water, served with fried vegetables and pickles, a cooling summer dish from Odisha."
+   },
+   {
+      "title": "Poha",
+      "region": "West",
+      "state": "Madhya Pradesh",
+      "image": "images/cuisine/poha.webp",
+      "description": "Flattened rice cooked with turmeric, onions, peanuts, and curry leaves, a light and flavorful breakfast option."
+   },
+   {
+      "title": "Dhokla",
+      "region": "West",
+      "state": "Gujarat",
+      "image": "images/cuisine/dhokla.webp",
+      "description": "Soft and spongy steamed cake made from fermented chickpea flour, tempered with mustard seeds and chilies."
+   },
+   {
+      "title": "Pani Puri",
+      "region": "West",
+      "state": "Maharashtra",
+      "image": "images/cuisine/pani_puri.webp",
+      "description": "Crispy hollow puris filled with tangy flavored water, mashed potatoes, and chickpeas, a popular street snack."
+   },
+   {
+      "title": "Idli Sambar",
+      "region": "South",
+      "state": "Tamil Nadu",
+      "image": "images/cuisine/idli_sambar.webp",
+      "description": "Steamed rice cakes served with hot and tangy sambar and coconut chutney, a popular South Indian breakfast."
+   },
+   {
+      "title": "Dal Baati Churma",
+      "region": "West",
+      "state": "Rajasthan",
+      "image": "images/cuisine/dal_baati_churma.webp",
+      "description": "Traditional dish with baked wheat baatis served with spicy lentil curry and sweet churma on the side."
+   },
+   {
+      "title": "Samosa",
+      "region": "North",
+      "state": "Uttar Pradesh",
+      "image": "images/cuisine/samosa.webp",
+      "description": "Deep-fried triangular pastry stuffed with spicy potatoes, peas, and herbs, served with tangy chutneys."
+   },
+   {
+      "title": "Rasgulla",
+      "region": "East",
+      "state": "West Bengal",
+      "image": "images/cuisine/rasgulla.webp",
+      "description": "Soft, spongy balls made from chhena and soaked in sugar syrup, a famous Bengali dessert loved across India."
+   }
+]

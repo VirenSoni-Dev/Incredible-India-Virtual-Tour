@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Lemon Tuesday';
+    src: url('LemonTuesday.woff2') format('woff2'),
+        url('LemonTuesday.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-Bold.woff2') format('woff2'),
+        url('SpoofTrial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-Light.woff2') format('woff2'),
+        url('SpoofTrial-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-BlackSlanted.woff2') format('woff2'),
+        url('SpoofTrial-BlackSlanted.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-Black.woff2') format('woff2'),
+        url('SpoofTrial-Black.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-Medium.woff2') format('woff2'),
+        url('SpoofTrial-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-BoldSlanted.woff2') format('woff2'),
+        url('SpoofTrial-BoldSlanted.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-ThinSlanted.woff2') format('woff2'),
+        url('SpoofTrial-ThinSlanted.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-Regular.woff2') format('woff2'),
+        url('SpoofTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-LightSlanted.woff2') format('woff2'),
+        url('SpoofTrial-LightSlanted.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-MediumSlanted.woff2') format('woff2'),
+        url('SpoofTrial-MediumSlanted.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-RegularSlanted.woff2') format('woff2'),
+        url('SpoofTrial-RegularSlanted.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoof Trial';
+    src: url('SpoofTrial-Thin.woff2') format('woff2'),
+        url('SpoofTrial-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
